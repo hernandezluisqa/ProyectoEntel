@@ -1,5 +1,20 @@
-21:15:17.685 INFO  AUTOMATION - Suite Iniciada: Default Suite
-21:15:31.653 INFO  AUTOMATION - Comenzando el test: comprarProducto
-21:15:32.925 INFO  AUTOMATION - Test Fallido: comprarProducto
-21:15:33.321 INFO  AUTOMATION - Matando el padre
-21:15:35.271 INFO  AUTOMATION - Suite finalizada: Default Suite
+22:30:57.854 INFO  AUTOMATION - Suite Iniciada: Default Suite
+22:31:14.423 INFO  AUTOMATION - Comenzando el test: buscarEquipoPorSKU
+22:31:15.776 INFO  AUTOMATION - Esperando que la pagina EquiposAccesoriosPage cargue
+22:31:16.343 INFO  AUTOMATION - Ha cargado satisfactoriamente la pagina EquiposAccesoriosPage
+22:31:19.249 INFO  AUTOMATION - Esperando que la pagina EquipoDetailPage cargue
+22:31:19.995 INFO  AUTOMATION - Ha cargado satisfactoriamente la pagina EquipoDetailPage
+22:31:22.626 INFO  AUTOMATION - Esperando que la pagina IdentificacionPage cargue
+22:31:23.659 INFO  AUTOMATION - Ha cargado satisfactoriamente la pagina IdentificacionPage
+22:31:23.724 INFO  AUTOMATION - Esperando que el elemento Rut Element sea visible
+22:31:23.739 INFO  AUTOMATION - El elemento Rut Element es visible
+22:31:23.951 INFO  AUTOMATION - Esperando que el elemento Phone Element sea visible
+22:31:23.970 INFO  AUTOMATION - El elemento Phone Element es visible
+22:31:24.076 INFO  AUTOMATION - Esperando que el elemento Email Element sea visible
+22:31:24.378 INFO  AUTOMATION - El elemento Email Element es visible
+22:31:24.900 INFO  AUTOMATION - Esperando que el elemento Boton Identificacion cargue para ser clickeable
+22:31:25.006 INFO  AUTOMATION - El elemento Boton Identificacion está clickeable
+22:31:25.300 INFO  AUTOMATION - Esperando que la pagina CarroDeCompraPage cargue
+22:31:35.966 INFO  AUTOMATION - Test Fallido: buscarEquipoPorSKU
+22:31:36.169 INFO  AUTOMATION - Matando el padre
+22:31:37.695 INFO  AUTOMATION - Suite finalizada: Default Suite

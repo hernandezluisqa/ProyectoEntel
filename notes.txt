@@ -1,2 +1,19 @@
-git clone
-mvn clean install
+Como     - Persona natural sin contrato en entel
+Quiero   - Ingresar a la seccion de venta de equipos y accesorios de entel
+Para     - Poder seleccionar un equipo disponible para la venta
+
+Scenario 1:
+    Given: el usuario ingresa a la seccion de equipos de la pagina de entel
+    When: hace click en un equipo de la lista de equipos
+    Then:  * es redirigido a la pagina individual del equipo.
+           * se visualiza los datos del equipo seleccionado.
+
+Scenario 2:
+    Given: el usuario ingresa a la seccion de equipos de la pagina de entel
+    When: hace click en el buscador de equipos
+    And: ingresa un equipo
+    And: selecciona el equipo filtrado
+    Then:  * es redirigido a la pagina individual del equipo.
+           * se visualiza los datos del equipo seleccionado.
+
+

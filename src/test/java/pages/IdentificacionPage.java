@@ -26,9 +26,13 @@ public class IdentificacionPage extends BasePage {
     }
 
     public void llenarFormularioDatosValidos(){
+        waitElementVisible(rut, "Rut Element");
         find(rut).sendKeys(DatosC.datosCliente().getRut());
+        waitElementVisible(phoneNumber, "Phone Element");
         find(phoneNumber).sendKeys(DatosC.datosCliente().getTelefono());
+        waitElementVisible(email, "Email Element");
         find(email).sendKeys(DatosC.datosCliente().getEmail());
+        waitElementClickable(indentificacionButton, "Boton Identificacion");
         find(indentificacionButton).click();
     }
 }

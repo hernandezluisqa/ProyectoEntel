@@ -4,19 +4,17 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.CarroDeCompraPage;
 import pages.DatosDespachoPage;
-import pages.EquiposPage;
+import pages.EquipoDetailPage;
+import pages.EquiposAccesoriosPage;
 import pages.HomePage;
 import pages.IdentificacionPage;
-import pages.TelefonoPage;
 import utilities.BaseTest;
-import utilities.OtherUtilities;
-import static utilities.OtherUtilities.sleep;
 
 public class ProductosTests extends BaseTest {
 
     private final HomePage homePage = new HomePage();
-    private final EquiposPage equiposPage = new EquiposPage();
-    private final TelefonoPage telefonoPage = new TelefonoPage();
+    private final EquiposAccesoriosPage equiposAccesoriosPage = new EquiposAccesoriosPage();
+    private final EquipoDetailPage equipoDetailPage = new EquipoDetailPage();
 
     private final IdentificacionPage identificacionPage = new IdentificacionPage();
     private final DatosDespachoPage datosDespachoPage = new DatosDespachoPage();
@@ -32,28 +30,40 @@ public class ProductosTests extends BaseTest {
 
     @Test (groups = {smoke})
     public void buscarEquipoPorSKU() {
-        equiposPage.buscarPorSku(0);
-        equiposPage.abrirEquipoBuscado();
-        telefonoPage.verifyPage();
-        telefonoPage.verifyPhone(0);
+        equiposAccesoriosPage.buscarPorSku(0);
+        equiposAccesoriosPage.abrirEquipoBuscado();
+
+        equipoDetailPage.waitPageToLoad();
+        equipoDetailPage.verifyPage();
+        equipoDetailPage.verifyPhone(0);
+        equipoDetailPage.comprarEquipoPrecioGeneral();
+
+        identificacionPage.waitPageToLoad();
+        identificacionPage.verifyPage();
+        identificacionPage.llenarFormularioDatosValidos();
+
+        carroDeCompraPage.waitPageToLoad();
+        carroDeCompraPage.verifyPage();
+        carroDeCompraPage.clickContinuarButton();
+
+        datosDespachoPage.waitPageToLoad();
+        datosDespachoPage.verifyPage();
+        //datosDespachoPage.llenarDireccion();
+        datosDespachoPage.llenarDatosDespacho();
+        //datosDespachoPage.clickContinuarButton();
+
+    }
+
+    @Test (groups = {smoke})
+    public void clickeandoTecnologia() {
+        homePage.clickTecnologia();
     }
 
     @Test (groups = {smoke})
     public void comprarProducto() {
-        equiposPage.buscarPorSku(1);
-        equiposPage.abrirEquipoBuscado();
-        telefonoPage.verifyPage();
-        telefonoPage.verifyPhone(1);
-        telefonoPage.comprarEquipoPrecioGeneral();
-        identificacionPage.waitPageToLoad();
-        identificacionPage.verifyPage();
-        identificacionPage.llenarFormularioDatosValidos();
-        OtherUtilities.sleep(5000);
-        carroDeCompraPage.waitPageToLoad();
-        carroDeCompraPage.clickContinuarButton();
-        datosDespachoPage.waitPageToLoad();
-        datosDespachoPage.llenarDatosDespacho();
-        datosDespachoPage.validarTituloCarrito();
+        equiposAccesoriosPage.buscarPorSku(1);
+        equiposAccesoriosPage.abrirEquipoBuscado();
+        equipoDetailPage.verifyPage();
+        equipoDetailPage.verifyPhone(1);
     }
-
 }

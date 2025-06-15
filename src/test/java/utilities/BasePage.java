@@ -41,20 +41,19 @@ public abstract class BasePage {
         Logs.info("Ha cargado satisfactoriamente la pagina %s", pageName);
     }
 
-    protected void waitElement(By locator, String elementName) {
+    protected WebDriverWait waitElement() {
         final var wait = new WebDriverWait(getDriver(), Duration.ofSeconds(this.timeOut));
-
-        Logs.info("Esperando que el element %s cargue", elementName);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-        Logs.info("Ha cargado satisfactoriamente el elemento %s", elementName);
+        return wait;
     }
 
     protected void waitElementClickable(By locator, String elementName) {
         final var wait = new WebDriverWait(getDriver(), Duration.ofSeconds(this.timeOut));
 
-        Logs.info("Esperando que el element %s cargue para ser clickeable", elementName);
+        Logs.info("Esperando que el elemento %s cargue para ser clickeable", elementName);
+
         wait.until(ExpectedConditions.elementToBeClickable(locator));
-        Logs.info("Ha cargado satisfactoriamente el elemento %s para ser clickeable", elementName);
+
+        Logs.info("El elemento %s está clickeable", elementName);
     }
 
     protected void waitForLoaderToDisappear(By loaderLocator) {

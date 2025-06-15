@@ -1,0 +1,30 @@
+[
+    {
+      "sku": "178054",
+      "type": "telefono",
+      "name": "Honor",
+      "description": "Honor 400 Lite 256GB + CHOICE X7 LITE",
+      "price": 299990
+    },
+    {
+      "sku": "136923",
+      "type": "telefono",
+      "name": "Apple",
+      "description": "iPhone 16e 128GB",
+      "price": 699990
+    },
+    {
+      "sku": "1CB06206",
+      "type": "cargador",
+      "name": "Samsung",
+      "description": "Cable de carga USB-C a USB-C",
+      "price": 22990
+    },
+    {
+      "sku": "2AU05811",
+      "type": "audífono",
+      "name": "Hoco",
+      "description": "Audífonos Disney Mickey Seminuevos",
+      "price": 4990
+    }
+]
